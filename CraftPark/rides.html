@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://world-of-wonders.net/rides -->
+<html lang="en" data-lt-installed="true">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="u6zByBV1Nm0GsN4uIVvO14mPATSxrrAPggfZiYwd">
+
+    <title>CraftPark - Attractions</title>
+
+    <link rel="shortcut icon" type="image/png" href="CraftParft-rgb.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net/">
+    <link href="./css" rel="stylesheet">
+    <link rel="preload" href="https://world-of-wonders.net/WebClient/assets/fonts/Minecraftia.ttf" as="font"
+        type="font/ttf" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: ErnestineWeb;
+            src: url("https://world-of-wonders.net/WebClient/assets/fonts/ErnestineWeb.woff2")
+        }
+
+        @font-face {
+            font-family: ErnestineWeb-Bold;
+            src: url("https://world-of-wonders.net/WebClient/assets/fonts/ErnestineWeb-Bold.woff2")
+        }
+
+        @font-face {
+            font-family: Minecraft;
+            src: url("https://world-of-wonders.net/WebClient/assets/fonts/Minecraftia.ttf")
+        }
+    </style>
+    <link rel="preload" as="style" href="./app.css">
+    <link rel="stylesheet" href="./app.css">
+
+<body class="font-sans antialiased">
+    <div class="min-h-screen bg-gray text-light relative pb-72 sm:pb-52 md:pb-32">
+
+
+        <nav x-data="{ open: false }" class="bg-dark-gray text-light fixed top-0 w-screen z-50">
+            <div class="px-4 pr-6 max-w-6xl md:mx-auto py-3  md:py-8 flex items-center">
+
+                <!-- Logo -->
+                <div class="flex-none absolute z-20 lg:z-0">
+                    <div class="flex items-center place-self-start w-20 lg:w-60 ">
+                        <a href="index.html" class="transition-all hover:opacity-80">
+                            <img src="img/CraftParft-rgb.png" class="w-96 h-auto mr-3 hidden lg:block" alt="CraftPark">
+                            <img src="img/CraftParft-rgb.png" class="w-12 h-auto lg:hidden block" alt="CraftPark">
+                            <!-- <img src="/assets/images/logo-250x248.png" class="w-16 h-auto" alt="World of Wonders" /> -->
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="flex-1  items-center justify-center hidden md:flex">
+                    <div class="hidden w-full md:block md:w-auto pb-2 md:pb-0">
+                        <ul
+                            class="text-lg flex flex-col p-4 md:p-0 mt-4 border border-light rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+
+                            <li>
+                                <a href="index.html"
+                                    class="block py-2 pl-3 pr-3 md:hover:bg-transparent md:border-0 md:p-0">
+                                    <div
+                                        class="px-6 py-2 transition-all hover:bg-light-gray hover:border-gray border-transparent border-4 rounded-full">
+                                        Accueil
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="m-0">
+                                <a href="rides.html"
+                                    class="block py-2 pl-3 pr-3 md:hover:bg-transparent md:border-0 md:p-0">
+                                    <div
+                                        class="px-6 py-2 transition-all hover:bg-light-gray hover:border-gray border-transparent border-4 rounded-full">
+                                        Attractions
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:flex hidden items-center justify-end w-0">
+                    <div class="flex items-center">
+                        <div class="lg:flex hidden">
+                            <a class="cursor-pointer">
+                                <div
+                                    class="bg-red border-dark-red ip-button hover:opacity-80 px-7 py-2 m-auto max-w-min border-4 rounded-full transition-all whitespace-nowrap truncate flex items-center gap-2">
+                                    <div class="flex">
+                                        <div>
+                                            play.derycube.fr
+                                        </div>
+                                        <div class="bg-dark-red w-1 ml-5 mr-5 -my-3"></div>
+                                        <div>
+                                            1.8-1.18.2
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex w-0 justify-end">
+
+                </div>
+
+                <!-- Hamburger -->
+                <div class="flex-1 flex items-center justify-center md:hidden z-10">
+                    <button @click="open = ! open"
+                        class="flex justify-center items-center p-3 mx-14 text-sm transition-all hover:bg-light-gray hover:border-gray border-transparent border-4 rounded-full w-full"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Menu</span>
+                        <svg class="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path :class="{&#39;hidden&#39;: open, &#39;inline-flex&#39;: ! open }" class="inline-flex"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path :class="{&#39;hidden&#39;: ! open, &#39;inline-flex&#39;: open }" class="hidden"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Responsive Navigation Menu -->
+            <div :class="{&#39;block&#39;: open, &#39;hidden&#39;: ! open}" class="md:hidden pb-2 hidden">
+                <ul
+                    class="font-medium text-xl flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+
+                    <li>
+                        <a href="index.html" class="block py-2 pl-3 pr-3 md:hover:bg-transparent md:border-0 md:p-0">
+                            <div
+                                class="px-6 py-2 transition-all bg-light-gray border-4 border-gray hover:opacity-80 rounded-full text-center">
+                                Accueil
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="m-0">
+                        <a href="rides.html" class="block py-2 pl-3 pr-3 md:hover:bg-transparent md:border-4 md:p-0">
+                            <div
+                                class="px-6 py-2 transition-all bg-light-gray border-4 border-gray hover:opacity-80 rounded-full text-center">
+                                Attractions
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="h-20 md:h-24 lg:h-28"></div>
+        <!-- Page Heading -->
+
+        <!-- Page Content -->
+        <main>
+            <section>
+                <div class="h-48 md:h-96 bg-cover bg-center flex justify-center items-center bg-light-gray"
+                    style="background-image: url(&#39;img/CraftPark-font.png&#39;)">
+
+                </div>
+            </section>
+
+            <section class="my-20 px-2">
+                <div class="flex-none md:grid grid-cols-2 gap-4 md:max-w-6xl m-auto">
+
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/Miner_Coaster.png&#39;)" role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-red text-light-red mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Fermé
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                Miner Coaster
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/DownFall.png&#39;)" role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-red text-light-red mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Fermé
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                DownFall
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/RockNRoll.png&#39;)" role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-green text-light-green mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Ouvert
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                RockNRoll
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/Carrousel.png&#39;)" role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-red text-light-red mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Fermé
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                Carrousel
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/PirateDesCaraibes.png&#39;)"
+                                role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-red text-light-red mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Fermé
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                Pirates des Caraïbes
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/Space_Montain.png&#39;)" role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-green text-light-green mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Ouvert
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                Scape Montain
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/Timber.png&#39;)" role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-green text-light-green mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Ouvert
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                Timber
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="pb-4 md:p-0">
+                        <a href="">
+                            <div class="bg-light-gray h-72 p-4 rounded-normal bg-center bg-cover overflow-hidden transition-all hover:opacity-80"
+                                style="background-image: url(&#39;./img/rides/null.png&#39;)" role="status">
+                                <div class="flex h-full items-end">
+                                    <div>
+                                        <div class="flex justify-start truncate lg:w-auto md:w-[40vw] w-[75vw] ">
+                                            <div
+                                                class="ml-2 bg-red text-light-red mr-2 px-3 py-1 rounded-full text-xs drop-shadow-2xl capitalize flex justify-center overflow-hidden whitespace-nowrap">
+                                                Soon
+                                            </div>
+                                        </div>
+                                        <div class="m-2 text-2xl drop-shadow lg:w-auto md:w-[40vw] w-[75vw]"
+                                            style="text-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.9);">
+                                            <span class="truncate block">
+                                                Soon
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-dark-gray absolute bottom-0 w-full h-72 sm:h-52 md:h-32 overflow-hidden">
+
+            <div class="hidden sm:block max-w-6xl m-auto px-4 lg:px-2 py-10">
+                <div class="flex-none sm:flex sm:flex-col-reverse md:flex-row justify-between items-center">
+
+                    <div class="flex justify-center w-auto mt-8 md:mt-0">
+                        <div class=" sm:w-auto">
+                            <img src="img/CraftParft-rgb.png" class="h-12 w-12 mr-3 block" alt="World of Wonders">
+                        </div>
+                        <div class=" ">
+                            <div>CraftPark </div>
+                            <div>On a pas fini de vous impressioner !</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sm:hidden flex justify-center text-center max-w-6xl m-auto px-4 lg:px-0 py-10">
+                <div class="flex flex-col gap-3">
+                    <div class="flex justify-center">
+                        <img src="img/CraftParft-rgb.png" class="h-12 w-12" alt="World of Wonders">
+                    </div>
+                    <div>CraftPark </div>
+                    <div>On a pas fini de vous impressioner !</div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
