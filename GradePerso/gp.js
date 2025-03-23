@@ -42,7 +42,7 @@ $('.tools button').click(function (e) {
 function colour(text) {
     left = htmlEncode("<");
     right = htmlEncode(">");
-    text = text + " &fPseudo"
+    text = text + " Pseudo"
     text = text.replace(/</gi, left);
     text = text.replace(/>/gi, right);
     text = text.replace(/\n/gi, "&r<br />");
